@@ -42,131 +42,131 @@ class FuturisticTheme {
 
   /// Quantum: electric cyan + deep violet. Pairs with QuantumPainter.
   static const quantum = FuturisticTheme(
-    accentColor: Color(0xFF00D4FF),
-    baseColor: Color(0xFF0D1117),
-    backgroundColor: Color(0xFF060A0F),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF00D4FF), Color(0xFF7B26F7)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Cosmos: deep-space blue + nebula purple. Pairs with CosmosPainter.
   static const cosmos = FuturisticTheme(
-    accentColor: Color(0xFF5B8CFF),
-    baseColor: Color(0xFF02040D),
-    backgroundColor: Color(0xFF010208),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF5B8CFF), Color(0xFF7B26F7)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Hologram: iridescent cyan. Pairs with HologramPainter.
   static const hologram = FuturisticTheme(
-    accentColor: Color(0xFF00FFFF),
-    baseColor: Color(0xFF050D15),
-    backgroundColor: Color(0xFF020810),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF00FFFF), Color(0xFFAA00FF)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Singularity: gravitational gold on void black. Pairs with SingularityPainter.
   static const singularity = FuturisticTheme(
-    accentColor: Color(0xFFFFC400),
-    baseColor: Color(0xFF050505),
-    backgroundColor: Color(0xFF000000),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFFFC400), Color(0xFFFF6D00)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Synapse: bio-electric green. Pairs with SynapsePainter.
   static const synapse = FuturisticTheme(
-    accentColor: Color(0xFF00FF88),
-    baseColor: Color(0xFF020408),
-    backgroundColor: Color(0xFF010204),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF00FF88), Color(0xFF00B4D8)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Kinetic: electric orange on near-black. Pairs with KineticPainter.
   static const kinetic = FuturisticTheme(
-    accentColor: Color(0xFFFF6B35),
-    baseColor: Color(0xFF12121A),
-    backgroundColor: Color(0xFF0A0A10),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFFF6B35), Color(0xFFFFD700)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Liquid Metal: chrome silver with cyan shimmer. Pairs with LiquidMetalPainter.
   static const liquidMetal = FuturisticTheme(
-    accentColor: Color(0xFFB0C4DE),
-    baseColor: Color(0xFF1C1C1C),
-    backgroundColor: Color(0xFF111111),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFB0C4DE), Color(0xFF00D4FF)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Prism: white crystal clarity. Pairs with PrismPainter.
   static const prism = FuturisticTheme(
-    accentColor: Color(0xFFFFFFFF),
-    baseColor: Color(0xFF1A1A2E),
-    backgroundColor: Color(0xFF0F0F1A),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFFFFFFF), Color(0xFF7B26F7)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Sumi: ink-on-paper Japanese aesthetic. Pairs with SumiPainter.
   static const sumi = FuturisticTheme(
-    accentColor: Color(0xFF1A1A1A),
-    baseColor: Color(0xFFF5F5F0),
-    backgroundColor: Color(0xFFEEEEE8),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF1A1A1A), Color(0xFFB22222)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Monolith: razor white light on matte black. Pairs with MonolithPainter.
   static const monolith = FuturisticTheme(
-    accentColor: Color(0xFFFFFFFF),
-    baseColor: Color(0xFF0F0F13),
-    backgroundColor: Color(0xFF080808),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFFFFFFF), Color(0xFF888888)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Obsidian: violet glow on pure obsidian. Pairs with ObsidianPainter.
   static const obsidian = FuturisticTheme(
-    accentColor: Color(0xFF9B59B6),
-    baseColor: Color(0xFF0A0A0A),
-    backgroundColor: Color(0xFF050505),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF9B59B6), Color(0xFF3498DB)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Chronos: amber mechanical. Pairs with ChronosPainter.
   static const chronos = FuturisticTheme(
-    accentColor: Color(0xFFFFB300),
-    baseColor: Color(0xFF1A1A1A),
-    backgroundColor: Color(0xFF0D0D0D),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFFFFB300), Color(0xFFFF6F00)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 
   /// Floating: frosted glass on soft dark. Pairs with FloatingPainter.
   static const floating = FuturisticTheme(
-    accentColor: Color(0xFF64B5F6),
-    baseColor: Color(0xFF1E2A3A),
-    backgroundColor: Color(0xFF0F1620),
+    accentColor: Color(0xFFFFFB00),
+    baseColor: Color(0xFFFFFFFF),
+    backgroundColor: Color(0xFFFFFFFF),
     glowGradient: LinearGradient(
-      colors: [Color(0xFF64B5F6), Color(0xFF7E57C2)],
+      colors: [Color(0xFFFFBB00), Color(0xFFF7E226)],
     ),
   );
 }

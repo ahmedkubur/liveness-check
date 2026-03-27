@@ -66,7 +66,7 @@ class LivenessMessages {
     this.moveLeft = 'Move left',
     this.moveUp = 'Move up',
     this.moveDown = 'Move down',
-    this.perfectHoldStill = 'Perfect! Hold still',
+    this.perfectHoldStill = 'Perfect Hold still',
     this.noFaceDetected = 'No face detected',
     this.errorCheckingFacePosition = 'Error checking face position',
 

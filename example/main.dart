@@ -181,7 +181,7 @@ class HomeScreen extends StatelessWidget {
                     moveRight: 'Mova para a direita',
                     moveUp: 'Mova para cima',
                     moveDown: 'Mova para baixo',
-                    perfectHoldStill: 'Perfeito! Fique parado',
+                    perfectHoldStill: 'Perfeito Fique parado',
                     noFaceDetected: 'Nenhum rosto detectado',
                     errorCheckingFacePosition: 'Ocorreu um erro no processamento',
 

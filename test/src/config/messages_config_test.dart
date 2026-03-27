@@ -14,7 +14,7 @@ void main() {
       expect(defaultConfig.moveLeft, equals('Move left'));
       expect(defaultConfig.moveUp, equals('Move up'));
       expect(defaultConfig.moveDown, equals('Move down'));
-      expect(defaultConfig.perfectHoldStill, equals('Perfect! Hold still'));
+      expect(defaultConfig.perfectHoldStill, equals('Perfect Hold still'));
       expect(defaultConfig.noFaceDetected, equals('No face detected'));
       expect(defaultConfig.errorCheckingFacePosition,
           equals('Error checking face position'));

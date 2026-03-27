@@ -396,7 +396,9 @@ class _LivenessDetectionViewState extends State<LivenessDetectionView> {
       setState(() => _currentStyle = chosen);
     }
   }
-
+  _goback() {
+    Navigator.pop(context);
+  }
   @override
   Widget build(BuildContext context) {
     final controller = Provider.of<LivenessController>(context);
@@ -428,21 +430,24 @@ class _LivenessDetectionViewState extends State<LivenessDetectionView> {
     }
 
     // Build app bar if enabled
-    final appBar = widget.showAppBar
-        ? widget.customAppBar ??
+    final appBar = 
+       
             AppBar(
-              title: const Text('Face Liveness Detection'),
-              backgroundColor: theme.appBarBackgroundColor,
-              foregroundColor: theme.appBarTextColor,
+              title: const Text('Face Liveness Detection',style: TextStyle(color: Colors.black,fontSize: 24),),
+              backgroundColor: Color(0xFFFFE100),
+              foregroundColor: Color(0xFFFFE100),
               elevation: 0,
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.refresh),
-                  onPressed: controller.resetSession,
+              leading: IconButton(
+                  icon: const Icon(Icons.arrow_back,color: Colors.black,),
+                  onPressed: _goback,
                 ),
-              ],
-            )
-        : null;
+              // actions: [
+              //   IconButton(
+              //     icon: const Icon(Icons.refresh),
+              //     onPressed: controller.resetSession,
+              //   ),
+              // ],
+            );
 
     // When a futuristic style is active, tint the whole screen with its
     // background colour so the themed UI spans the entire display.

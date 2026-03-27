@@ -65,14 +65,14 @@ class LivenessTheme {
   const LivenessTheme({
     this.appBarBackgroundColor = Colors.black38,
     this.appBarTextColor = Colors.white,
-    this.backgroundColor = Colors.black,
-    this.primaryColor = const Color(0xFF8A8DDF),
+    this.backgroundColor = Colors.white,
+    this.primaryColor = Colors.black,
     this.successColor = Colors.green,
     this.errorColor = Colors.red,
-    this.warningColor = Colors.orange,
-    this.ovalGuideColor = const Color(0xFF8A8DDF),
-    this.overlayColor = Colors.black,
-    this.overlayOpacity = 0.8,
+    this.warningColor = Colors.red,
+    this.ovalGuideColor = Colors.black,
+    this.overlayColor = Colors.white,
+    this.overlayOpacity = 1,
     this.instructionTextStyle = const TextStyle(
       color: Colors.white,
       fontSize: 16,
@@ -82,7 +82,7 @@ class LivenessTheme {
       fontSize: 16,
     ),
     this.guidanceTextStyle = const TextStyle(
-      color: Color(0xFF2E38B7),
+      color: Colors.black,
       fontSize: 18,
       fontWeight: FontWeight.w500,
     ),
@@ -168,8 +168,8 @@ class LivenessTheme {
     );
 
     return LivenessTheme(
-      appBarBackgroundColor: colorScheme.surface.withValues(alpha: 0.8),
-      appBarTextColor: colorScheme.onSurface,
+      appBarBackgroundColor: Colors.white,
+      appBarTextColor: Colors.black,
       backgroundColor: colorScheme.surface,
       primaryColor: colorScheme.primary,
       successColor: colorScheme.secondary,
