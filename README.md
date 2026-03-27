@@ -176,7 +176,7 @@ LivenessDetectionScreen(
       moveRight: 'Mova para a direita',
       moveUp: 'Mova para cima',
       moveDown: 'Mova para baixo',
-      perfectHoldStill: 'Perfeito! Fique parado',
+      perfectHoldStill: 'Perfeito Fique parado',
       noFaceDetected: 'Nenhum rosto detectado',
 
       // Process Status Messages
@@ -741,3 +741,4 @@ Contributions are welcome! Feel free to submit a pull request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+# liveness-check
