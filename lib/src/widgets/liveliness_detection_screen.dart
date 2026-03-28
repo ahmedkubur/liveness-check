@@ -433,9 +433,9 @@ class _LivenessDetectionViewState extends State<LivenessDetectionView> {
     final appBar = 
        
             AppBar(
-              title: const Text('Face Liveness Detection',style: TextStyle(color: Colors.black,fontSize: 24),),
-              backgroundColor: Color(0xFFFFE100),
-              foregroundColor: Color(0xFFFFE100),
+              title: const Text('Liveness Detection',style: TextStyle(color: Colors.black,fontSize: 24),),
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.white,
               elevation: 0,
               leading: IconButton(
                   icon: const Icon(Icons.arrow_back,color: Colors.black,),
