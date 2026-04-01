@@ -590,6 +590,40 @@ class _LivenessDetectionViewState extends State<LivenessDetectionView> {
                     ),
                   ),
 
+                // Camera switch button
+                if (controller.canSwitchCamera &&
+                    controller.currentState != LivenessState.completed)
+                  Positioned(
+                    bottom: 24 + mediaQuery.padding.bottom,
+                    right: 20,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () async {
+                          await controller.switchCamera();
+                        },
+                        borderRadius: BorderRadius.circular(24),
+                        child: Container(
+                          width: 48,
+                          height: 48,
+                          decoration: BoxDecoration(
+                            color: Colors.black.withValues(alpha: 0.5),
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withValues(alpha: 0.75),
+                              width: 1.2,
+                            ),
+                          ),
+                          child: const Icon(
+                            Icons.cameraswitch_rounded,
+                            color: Colors.white,
+                            size: 24,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
                 // Success overlay
                 if (controller.currentState == LivenessState.completed)
                   widget.customSuccessOverlay ??

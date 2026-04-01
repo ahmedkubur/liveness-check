@@ -26,6 +26,9 @@ class LivenessController extends ChangeNotifier {
   /// Available cameras
   final List<CameraDescription> _cameras;
 
+  /// Active camera currently used by the image stream.
+  late CameraDescription _activeCamera;
+
   /// Configuration
   LivenessConfig _config;
 
@@ -119,6 +122,11 @@ class LivenessController extends ChangeNotifier {
           challenges: LivenessSession.generateRandomChallenges(
               config ?? const LivenessConfig()),
         ) {
+    _activeCamera = _cameras.firstWhere(
+      (camera) => camera.lensDirection == CameraLensDirection.front,
+      orElse: () => _cameras.first,
+    );
+
     // Apply "sandwich" logic if enabled and using random challenges
     if (_config.sandwichNormalChallenge && challengeTypes == null) {
       final challenges = _session.challenges;
@@ -161,7 +169,7 @@ class LivenessController extends ChangeNotifier {
       _zoomChallengeController.reset();
 
       // Initialize camera service
-      await _cameraService.initialize(_cameras);
+      await _cameraService.initialize([_activeCamera]);
 
       // Start motion tracking
       _motionService.startAccelerometerTracking();
@@ -234,11 +242,7 @@ class LivenessController extends ChangeNotifier {
         }
       }
 
-      // Get the front camera
-      final camera = _cameras.firstWhere(
-        (camera) => camera.lensDirection == CameraLensDirection.front,
-        orElse: () => _cameras.first,
-      );
+      final camera = _activeCamera;
 
       // Process faces with error handling
       List<Face>? faces = [];
@@ -697,6 +701,11 @@ class LivenessController extends ChangeNotifier {
   /// Whether camera is initialized
   bool get isInitialized => _cameraService.isInitialized;
 
+  /// Whether the device has both front and back cameras available.
+  bool get canSwitchCamera =>
+      _cameras.any((camera) => camera.lensDirection == CameraLensDirection.front) &&
+      _cameras.any((camera) => camera.lensDirection == CameraLensDirection.back);
+
   /// Whether a face is currently detected
   bool get isFaceDetected => _isFaceDetected;
 
@@ -768,6 +777,53 @@ class LivenessController extends ChangeNotifier {
       }
     }
     return null;
+  }
+
+  /// Toggle between front and back camera at runtime.
+  Future<void> switchCamera() async {
+    if (_isDisposed || !canSwitchCamera) return;
+
+    _isProcessing = true;
+    _statusMessage = _config.messages.initializingCamera;
+    if (!_isDisposed) notifyListeners();
+
+    try {
+      await _cameraService.stopImageStream();
+      await _cameraService.dispose();
+      _activeCamera = _activeCamera.lensDirection == CameraLensDirection.front
+          ? _cameras.firstWhere(
+              (camera) => camera.lensDirection == CameraLensDirection.back,
+              orElse: () => _activeCamera,
+            )
+          : _cameras.firstWhere(
+              (camera) => camera.lensDirection == CameraLensDirection.front,
+              orElse: () => _activeCamera,
+            );
+
+      await _cameraService.initialize([_activeCamera]);
+
+      await _cameraService.startImageStream(processCameraImage);
+
+      if (_captureFinalImage && _cameraService.controller != null) {
+        _singleCaptureService = CaptureService(
+          cameraController: _cameraService.controller,
+        );
+      }
+    } catch (e) {
+      debugPrint('Error switching camera: $e');
+      _statusMessage = _config.messages.errorInitializingCamera;
+    } finally {
+      _isProcessing = false;
+      if (!_session.isComplete) {
+        if (_session.state == LivenessState.performingChallenges) {
+          _updateStatusMessage();
+        } else if (_session.state == LivenessState.centeringFace ||
+            _session.state == LivenessState.initial) {
+          _statusMessage = _config.messages.initialInstruction;
+        }
+      }
+      if (!_isDisposed) notifyListeners();
+    }
   }
 
   /// Clean up resources
